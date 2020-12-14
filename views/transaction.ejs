@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Transaction List</h1>
+    <ul>
+      <%
+        var description = '';
+        var category = '';
+        var amount = '';
+        for (i = 0; i < userlist.length; i++) {
+          description += '<li><a>'userlist[i].description'</a></li>';
+          category += '<li><a>'userlist[i].category'</a></li>';
+          amount += '<li><a>'userlist[i].amount'</a></li>';
+        }
+      %>
+      <%- description %>
+      <%- category %>
+      <%- amount %>
+
+    </ul>
+  </body>
+</html>
